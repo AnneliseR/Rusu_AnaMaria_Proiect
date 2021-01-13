@@ -1,0 +1,67 @@
+﻿<Window x:Name="frmMain" x:Class="Rusu_AnaMaria_Proiect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rusu_AnaMaria_Proiect"
+        mc:Ignorable="d"
+        Title="Pancakes Factory" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" AutomationProperties.Name="frmMain" MenuItem.Click="FilledItemsShow_Click">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblTitle" Content="Pancakes - Cook &amp; Sale" FontSize="35" FontStyle="Normal" FontWeight="Bold" FontFamily="Bradley Hand ITC" Margin="158,0,-178,0" Grid.Column="1"/>
+        <GroupBox x:Name="gbDressing" Header="Dressing" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" Margin="18,48,500,271" Grid.Column="1">
+            <Canvas/>
+        </GroupBox>
+        <GroupBox x:Name="gbFilled" Header="Filled" FontWeight="Bold" FontFamily="Yu Gothic UI Semibold" Margin="402,48,66,234" Grid.Column="1">
+            <Canvas/>
+        </GroupBox>
+        <Label x:Name="lblChocolateDressing" Content="Chocolate" FontFamily="Yu Gothic UI" FontWeight="Normal" Margin="28,71,-48,-71" FontSize="16" Grid.Column="1"/>
+        <TextBox x:Name="txtDressingChocolate" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="168,71,517,339" RenderTransformOrigin="0.556,0.501" Grid.Column="1"/>
+        <Label x:Name="lblSourCherryDressing" Content="SourCherry Syrup" FontFamily="Yu Gothic UI" FontSize="16" Margin="28,114,-48,-114" Grid.Column="1"/>
+        <TextBox x:Name="txtDressingSourCherry" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="168,119,517,291" RenderTransformOrigin="0.379,0.459" Grid.Column="1"/>
+        <Label x:Name="lblBanana" Content=" Banana" FontFamily="Yu Gothic UI" FontSize="16" Margin="417,71,-437,-71" Grid.Column="1"/>
+        <TextBox x:Name="txtBananaFilled" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Margin="568,71,92,339" Grid.Column="1"/>
+        <Label x:Name="lblMangoFilled" Content="Mango &amp; Pineapple" FontFamily="Yu Gothic UI" FontSize="16" Margin="417,114,-437,-114" Grid.Column="1"/>
+        <TextBox x:Name="txtMangoFilled" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" FontFamily="Segoe UI" Margin="568,119,92,291" Grid.Column="1"/>
+        <Label x:Name="lblPomegranateFilled" Content="Pomegranate" FontFamily="Yu Gothic UI" FontSize="16" Margin="417,160,-437,-160" Grid.Column="1"/>
+        <TextBox x:Name="txtPomegranateFilled" Text="0" TextWrapping="Wrap" Width="120" FontSize="12" IsReadOnly="True" Margin="568,160,92,249" Grid.Column="1"/>
+        <GroupBox x:Name="gbSales" Header="Current Sale" Margin="44,205,64,14" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold" Grid.Column="1">
+            <Canvas/>
+        </GroupBox>
+        <Label x:Name="lblQuantity" Content="Quantity" FontFamily="Yu Gothic UI" FontSize="16" Margin="62,243,-82,-243" Grid.Column="1"/>
+        <TextBox x:Name="txtQuantity" Text="0" TextWrapping="Wrap" Width="120" Margin="143,244,517,164" Grid.Column="1"/>
+        <Label x:Name="lblType" Content="Type" FontFamily="Yu Gothic" FontSize="16" Margin="297,244,-317,-244" Grid.Column="1"/>
+        <ComboBox x:Name="cmbType" Width="120" Margin="342,244,318,164" SelectionChanged="cmbType_SelectionChanged" Grid.Column="1"/>
+        <Label x:Name="lblPrice" Content="Price" FontFamily="Yu Gothic" FontSize="16" Margin="505,244,257,151" Grid.Column="1"/>
+        <TextBox x:Name="txtPrice" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Margin="568,244,92,164" Grid.Column="1"/>
+        <ListBox x:Name="lstSale" Margin="73,288,257,67" Grid.Column="1"/>
+        <Label x:Name="lblTotal" Content="Total" FontFamily="Yu Gothic" FontSize="16" Margin="342,372,392,26" Grid.Column="1"/>
+        <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Margin="403,376,257,30" Grid.Column="1"/>
+        <Button x:Name="btnAddToSale" Content="Add To Sale" Margin="582,288,106,121" Click="btnAdd_Click" Grid.Column="1"/>
+        <Button x:Name="btnRemoveItem" Content="Remove Item" Margin="582,318,106,90" Click=" btnRemoveItem_Click" Grid.Column="1"/>
+        <Button x:Name="Checkout" Content="Checkout" FontWeight="Bold" Margin="582,372,106,30" Click=" btnCheckOut_Click" Grid.Column="1"/>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="131" Grid.ColumnSpan="2">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Pancakes">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="chocolateMenuItem" Header="Chocolate"/>
+                        <MenuItem x:Name="sourCherryMenuItem" Header="Sour Cherry"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled">
+                        <MenuItem x:Name="bananaMenuItem" Header="Banana"/>
+                        <MenuItem x:Name="mangoCherryMenuItem" Header="Mango"/>
+                        <MenuItem x:Name="pomegranateCherryMenuItem" Header="Pomegranate"/>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+
+</Window>

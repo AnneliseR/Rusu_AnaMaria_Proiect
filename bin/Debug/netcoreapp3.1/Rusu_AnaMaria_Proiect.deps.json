@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Rusu_AnaMaria_Proiect/1.0.0": {
+        "runtime": {
+          "Rusu_AnaMaria_Proiect.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rusu_AnaMaria_Proiect/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
